@@ -64,6 +64,9 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  /* height: 100vh;
+  width: 100vw;
+  overflow: hidden; */
 }
 
 a {
@@ -180,7 +183,7 @@ h6 {
   font-size: 14px;
   padding: 8px 30px;
   margin: 0 0 0 30px;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: 0.3s;
   border: 2px solid var(--accent-color);
 }
@@ -472,6 +475,8 @@ h6 {
 .footer .footer-top {
   padding: 40px 0;
   background-color: color-mix(in srgb, var(--footer-background-color) 90%, white 10%);
+  justify-content:center;
+  align-items: center;
 }
 
 .footer .footer-about .logo {
@@ -521,6 +526,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  align-items: center;
 }
 
 .footer .footer-links {
@@ -752,6 +758,26 @@ section,
   padding: 60px 0;
   scroll-margin-top: 80px;
   overflow: clip;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#about.section {
+  padding-bottom: 30px; /* Mengurangi jarak di bagian bawah section about */
+}
+
+#features.section {
+  padding-top: 30px; /* Mengurangi jarak di bagian atas section features */
+}
+
+#services.section {
+  padding-top: 5px; /* Sesuaikan jarak atas */
+  padding-bottom: 40px; /* Sesuaikan jarak bawah */
+}
+
+/* Atur jarak antar item di dalam section services */
+.service-item {
+  margin-bottom: 30px; /* Mengatur jarak antar item di dalam grid */
 }
 
 @media (max-width: 1199px) {
@@ -766,8 +792,12 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  margin-bottom: 20px;
   position: relative;
+}
+
+.section-title-gallery {
+  margin-bottom: 0px;
 }
 
 .section-title h2 {
@@ -980,6 +1010,7 @@ section,
 .features .features-image {
   position: relative;
   min-height: 400px;
+  
 }
 
 .features .features-image img {
@@ -990,6 +1021,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .features .features-item h4 {
@@ -1123,106 +1155,6 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 20px 10px 20px;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 5px;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  font-family: var(--heading-font);
-}
-
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 0 10px 0;
-  }
-}
-
-.portfolio .portfolio-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -100%;
-  z-index: 3;
-  transition: all ease-in-out 0.5s;
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
-  padding: 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  transition: 0.3s;
-  line-height: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1450,7 +1382,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item+.info-item {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .contact .info-item i {
@@ -1524,33 +1456,33 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
+.gallery-details .gallery-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.gallery-details .gallery-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: color-mix(in srgb, var(--default-color), transparent 85%);
   opacity: 1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
 
-.portfolio-details .portfolio-info {
+.gallery-details .gallery-info {
   background-color: var(--surface-color);
   padding: 30px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-details .portfolio-info h3 {
+.gallery-details .gallery-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1558,27 +1490,27 @@ section,
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
-.portfolio-details .portfolio-info ul {
+.gallery-details .gallery-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.gallery-details .gallery-info ul li+li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.gallery-details .gallery-description {
   padding-top: 30px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.gallery-details .gallery-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.gallery-details .gallery-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -1814,6 +1746,14 @@ section,
 
 .uo{
   width: 95%;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.up{
+  font-size: medium;
+  font-family: 'Helvetica Neue';
 }
 
 .vo\/3{
@@ -1885,6 +1825,8 @@ section,
 }
 .uo{
   width: 95%;
+  font-size: medium
+  font-famil
 }
 
 .icon {
@@ -1917,13 +1859,230 @@ section,
   justify-content: space-between;
   min-height: 350px; /* Or use height for fixed height */
 }
+/*--------------------------------------------------------------
+# Flip Card
+--------------------------------------------------------------*/
+/* Flip Card Styles */
+.flip-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Additional Styles for List Items */
+.card-body ul {
+  padding-left: 20px; /* Indent the list */
+}
+
+.card-body ul li {
+  margin: 5px 0; /* Space between list items */
+  color: var(--default-color); /* Use your default text color */
+  font-size: 1rem; /* Set font size for list items */
+}
+
+/* Card Styles */
+.service-item {
+  position: relative; /* Membuat posisi relatif untuk overlay */
+}
+
+/* Background Image for Each Card Front */
+.bg-image-1 {
+  background-image: url('../img/portfolio/aaa/paket\ 1.jpeg'); /* Gambar untuk Basic Elegance */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Pusatkan gambar */
+  height: 300px; /* Tinggi card */
+  display: flex; /* Atur konten dengan flexbox */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  color: white; /* Warna teks putih untuk kontras */
+}
+
+.bg-image-1::before {
+  content: ''; /* Buat elemen kosong */
+  position: absolute; /* Absolut untuk overlay */
+  top: 0; /* Pusatkan di atas */
+  left: 0; /* Pusatkan di kiri */
+  right: 0; /* Pusatkan di kanan */
+  bottom: 0; /* Pusatkan di bawah */
+  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
+  z-index: 1; /* Pastikan overlay di atas gambar */
+}
+
+.bg-image-1 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul *
+
+}
+
+.bg-image-1 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  font-size: small; /* Ukuran font untuk deskripsi */
+}
+
+/* Background Image for Classic Romance */
+.bg-image-2 {
+  background-image: url('../img/portfolio/aaa/paket\ 3\ \(2\).jpeg'); /* Gambar untuk Classic Romance */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Pusatkan gambar */
+  height: 300px; /* Tinggi card */
+  display: flex; /* Atur konten dengan flexbox */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  color: white; /* Warna teks putih untuk kontras */
+}
+
+.bg-image-2::before {
+  content: ''; /* Buat elemen kosong */
+  position: absolute; /* Absolut untuk overlay */
+  top: 0; /* Pusatkan di atas */
+  left: 0; /* Pusatkan di kiri */
+  right: 0; /* Pusatkan di kanan */
+  bottom: 0; /* Pusatkan di bawah */
+  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
+  z-index: 1; /* Pastikan overlay di atas gambar */
+}
+
+.bg-image-2 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-2 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  font-size: small; /* Ukuran font untuk deskripsi */
+}
+
+/* Background Image for Royal Glamour */
+.bg-image-3 {
+  background-image: url('../img/portfolio/aaa/paket\ 3.jpeg'); /* Gambar untuk Classic Romance */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Pusatkan gambar */
+  height: 300px; /* Tinggi card */
+  display: flex; /* Atur konten dengan flexbox */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  color: white; /* Warna teks putih untuk kontras */
+}
+
+.bg-image-3::before {
+  content: ''; /* Buat elemen kosong */
+  position: absolute; /* Absolut untuk overlay */
+  top: 0; /* Pusatkan di atas */
+  left: 0; /* Pusatkan di kiri */
+  right: 0; /* Pusatkan di kanan */
+  bottom: 0; /* Pusatkan di bawah */
+  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
+  z-index: 1; /* Pastikan overlay di atas gambar */
+}
+
+.bg-image-3 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-3 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  font-size: small; /* Ukuran font untuk deskripsi */
+}
+
+/* Background Image for Custom package */
+.bg-image-4 {
+  background-image: url('../img/portfolio/aaa/about.jpeg'); /* Gambar untuk Classic Romance */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Pusatkan gambar */
+  height: 300px; /* Tinggi card */
+  display: flex; /* Atur konten dengan flexbox */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  color: white; /* Warna teks putih untuk kontras */
+}
+
+.bg-image-4::before {
+  content: ''; /* Buat elemen kosong */
+  position: absolute; /* Absolut untuk overlay */
+  top: 0; /* Pusatkan di atas */
+  left: 0; /* Pusatkan di kiri */
+  right: 0; /* Pusatkan di kanan */
+  bottom: 0; /* Pusatkan di bawah */
+  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
+  z-index: 1; /* Pastikan overlay di atas gambar */
+}
+
+.bg-image-4 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-4 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  font-size: small; /* Ukuran font untuk deskripsi */
+}
+
+/* Other general styles for flip card */
+.card-body ul {
+  padding-left: 20px; /* Indent the list */
+}
+
+.card-body ul li {
+  margin: 5px 0; /* Space between list items */
+  color: var(--default-color); /* Use your default text color */
+  font-size: 1rem; /* Set font size for list items */
+}
 
 /* Flip card container */
 .flip-card {
   width: 100%; /* Sesuaikan lebar card dengan lebar kontainer */
   height: 100%; /* Sesuaikan tinggi card dengan tinggi kontainer */
   perspective: 1000px;
+  border-radius: 10px;
 }
 
 .flip-card-inner {
@@ -1972,4 +2131,490 @@ section,
 }
 .mt{
   margin-top: 2.5rem;
+}
+
+.flip-icon {
+  font-size: 16px; /* Atur ukuran ikon */
+  position: absolute;
+  top: 240px; /* Atur posisi ikon */
+  right: -7px;
+  color: #cacaca; /* Warna ikon */
+  cursor: pointer; /* Ubah cursor menjadi pointer untuk menunjukkan interaktivitas */
+  transition: transform 0.3s ease; /* Tambahkan animasi */
+}
+
+.flip-icon:hover {
+  transform: rotate(180deg); /* Efek rotasi saat di-hover */
+}
+
+.flipped {
+  transform: rotate(180deg);
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+
+  &.animation-reveal {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.card {
+  margin: 0 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 35, 0.25);
+  border-radius: 8px;
+  height: 200px;
+  width: 200px;
+  display: block;
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  cursor: pointer;
+  transition: width 0.16s ease-in-out, height 0.16s ease-in-out;
+}
+
+.card.is-custom-selected {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-bg {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .body {
+  background-color: #4a5899;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.carousel.animation-reveal {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card {
+  margin: 0 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 35, 0.25);
+  border-radius: 10px;
+  height: 200px; /* Pastikan height diatur */
+  width: 200px;  /* Pastikan width diatur */
+  background-size: cover;
+}
+
+.card.is-custom-selected {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-bg {
+  height: 100%;
+  width: 100%;
+  /* background-position: center; */
+  /* background-size: cover; */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+.container {
+  padding-bottom: 0rem;
+}
+
+.container-section {
+  padding-bottom: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+
+#tranding {
+  padding: 2rem 0;
+  padding-top: 0;
+  padding-bottom: 0px;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 7rem 0;
+    padding-bottom: 0px;
+    /* padding-top: 0; */
+  }
+}
+
+#tranding .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 50rem;
+  height: 38rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-top: 0px;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+.more-button-container {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.more-button {
+  /* background-color: #a5a5a5; */
+  color: #ffc451;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: small;
+  font-weight: medium;
+  margin-bottom: 40px;
+}
+
+.more-button:hover {
+  color: #000;
+}
+
+.list-unstyled {
+  margin: 10px 0; /* Jarak atas dan bawah untuk paragraf */
+  text-align: left; /* Rata kiri */
+  font-size: x-small; /* Ukuran font yang sesuai */
+  font-weight: 400;
+  color: #000; /* Warna teks */
+  font-family: 'Montserrat';
+}
+
+.list-unstyled-royal {
+  margin: 10px 0; /* Jarak atas dan bawah untuk paragraf */
+  text-align: left; /* Rata kiri */
+  font-size: x-small; /* Ukuran font yang sesuai */
+  font-weight: 400;
+  color: #000; /* Warna teks */
+  font-family: 'Montserrat';
+}
+
+.gallery {
+  padding: 20px 0;
+}
+
+/* .gallery .section-title p {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+} */
+
+.gallery .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery .gallery-item {
+  margin-bottom: 30px;
+}
+
+.gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.about-h1 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna judul menjadi putih */
+  font-size: 30px; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+  font-family: 'Montserrat';
+
+}
+
+.about-h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna judul menjadi putih */
+  font-size: 25px; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+  font-family: 'Montserrat';
+
+}
+
+.about-p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna judul menjadi putih */
+  font-size: 15px; /* Ukuran font untuk judul */
+  font-weight: 300;
+  font-family: 'Montserrat';
 }

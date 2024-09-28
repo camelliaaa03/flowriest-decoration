@@ -1,0 +1,146 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: var(--default-font);
+    line-height: 1.6;
+    background-color: var(--background-color);
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Page Title */
+  .page-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .page-title h1 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+  }
+  
+  .page-title p {
+    font-size: 1.2rem;
+    color: var(--default-color);
+  }
+  
+  /* Portfolio Details Section */
+  .section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  /* Left Column - List Items */
+  .list-container {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Divider */
+  }
+  
+  .list-container ul {
+    list-style-type: none;
+  }
+  
+  .list-container ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: var(--default-color);
+  }
+  
+  /* Center Column - Image */
+  .image-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Right Column - Info */
+  .info-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .info-container h3 {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+  }
+  
+  .info-container ul {
+    list-style-type: none;
+  }
+  
+  .info-container ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: var(--default-color);
+  }
+  
+  /* Navbar Menu */
+  .navmenu {
+    padding: 0;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Center align the menu items */
+  }
+  
+  .navmenu li {
+    position: relative;
+  }
+  
+  .navmenu a {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    transition: 0.3s;
+  }
+  
+  .navmenu a:hover,
+  .navmenu .active {
+    color: var(--nav-hover-color);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column; /* Stack columns on smaller screens */
+    }
+  
+    .list-container,
+    .info-container {
+      border-right: none; /* Remove divider on small screens */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+  }
+  
