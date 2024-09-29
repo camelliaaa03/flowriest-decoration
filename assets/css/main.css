@@ -1937,16 +1937,14 @@ section,
 }
 
 .bg-image-1 h3 {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #704b00; /* Ubah warna judul menjadi putih */
-  font-size: large; /* Ukuran font untuk judul */
-  font-weight: bold; /* Tebal untuk judul *
-
+  position: relative;
+  z-index: 2;
+  color: #704b00;
+  font-size: large;
+  font-weight: bold;
 }
 
 .bg-image-1 p {
-  position: relative; /* Posisikan teks agar di atas overlay */
   z-index: 2; /* Pastikan teks di atas overlay */
   color: #000000; /* Ubah warna deskripsi menjadi putih */
   font-size: small; /* Ukuran font untuk deskripsi */
