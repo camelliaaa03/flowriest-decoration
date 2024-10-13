@@ -208,3 +208,7 @@
 
 })();
 
+function toggleDetails(cardId) {
+  const card = document.getElementById(cardId);
+  card.classList.toggle("expanded");
+}

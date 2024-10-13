@@ -1862,40 +1862,7 @@ section,
 /*--------------------------------------------------------------
 # Flip Card
 --------------------------------------------------------------*/
-/* Flip Card Styles */
-.flip-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
 
 /* Additional Styles for List Items */
 .card-body ul {
@@ -1917,152 +1884,33 @@ section,
 .bg-image-1 {
   background-image: url('../img/portfolio/aaa/paket\ 1.jpeg'); /* Gambar untuk Basic Elegance */
   background-size: cover; /* Menutupi seluruh area */
-  background-position: center; /* Pusatkan gambar */
-  height: 300px; /* Tinggi card */
-  display: flex; /* Atur konten dengan flexbox */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  color: white; /* Warna teks putih untuk kontras */
-}
 
-.bg-image-1::before {
-  content: ''; /* Buat elemen kosong */
-  position: absolute; /* Absolut untuk overlay */
-  top: 0; /* Pusatkan di atas */
-  left: 0; /* Pusatkan di kiri */
-  right: 0; /* Pusatkan di kanan */
-  bottom: 0; /* Pusatkan di bawah */
-  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
-  z-index: 1; /* Pastikan overlay di atas gambar */
-}
-
-.bg-image-1 h3 {
-  position: relative;
-  z-index: 2;
-  color: #704b00;
-  font-size: large;
-  font-weight: bold;
-}
-
-.bg-image-1 p {
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #000000; /* Ubah warna deskripsi menjadi putih */
-  font-size: small; /* Ukuran font untuk deskripsi */
 }
 
 /* Background Image for Classic Romance */
 .bg-image-2 {
   background-image: url('../img/portfolio/aaa/paket\ 3\ \(2\).jpeg'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
-  background-position: center; /* Pusatkan gambar */
-  height: 300px; /* Tinggi card */
-  display: flex; /* Atur konten dengan flexbox */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  color: white; /* Warna teks putih untuk kontras */
+
 }
 
-.bg-image-2::before {
-  content: ''; /* Buat elemen kosong */
-  position: absolute; /* Absolut untuk overlay */
-  top: 0; /* Pusatkan di atas */
-  left: 0; /* Pusatkan di kiri */
-  right: 0; /* Pusatkan di kanan */
-  bottom: 0; /* Pusatkan di bawah */
-  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
-  z-index: 1; /* Pastikan overlay di atas gambar */
-}
 
-.bg-image-2 h3 {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #704b00; /* Ubah warna judul menjadi putih */
-  font-size: large; /* Ukuran font untuk judul */
-  font-weight: bold; /* Tebal untuk judul */
-}
-
-.bg-image-2 p {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #000000; /* Ubah warna deskripsi menjadi putih */
-  font-size: small; /* Ukuran font untuk deskripsi */
-}
 
 /* Background Image for Royal Glamour */
 .bg-image-3 {
   background-image: url('../img/portfolio/aaa/paket\ 3.jpeg'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
-  background-position: center; /* Pusatkan gambar */
-  height: 300px; /* Tinggi card */
-  display: flex; /* Atur konten dengan flexbox */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  color: white; /* Warna teks putih untuk kontras */
+ 
 }
 
-.bg-image-3::before {
-  content: ''; /* Buat elemen kosong */
-  position: absolute; /* Absolut untuk overlay */
-  top: 0; /* Pusatkan di atas */
-  left: 0; /* Pusatkan di kiri */
-  right: 0; /* Pusatkan di kanan */
-  bottom: 0; /* Pusatkan di bawah */
-  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
-  z-index: 1; /* Pastikan overlay di atas gambar */
-}
-
-.bg-image-3 h3 {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #704b00; /* Ubah warna judul menjadi putih */
-  font-size: large; /* Ukuran font untuk judul */
-  font-weight: bold; /* Tebal untuk judul */
-}
-
-.bg-image-3 p {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #000000; /* Ubah warna deskripsi menjadi putih */
-  font-size: small; /* Ukuran font untuk deskripsi */
-}
 
 /* Background Image for Custom package */
 .bg-image-4 {
   background-image: url('../img/portfolio/aaa/about.jpeg'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
-  background-position: center; /* Pusatkan gambar */
-  height: 300px; /* Tinggi card */
-  display: flex; /* Atur konten dengan flexbox */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  color: white; /* Warna teks putih untuk kontras */
 }
 
-.bg-image-4::before {
-  content: ''; /* Buat elemen kosong */
-  position: absolute; /* Absolut untuk overlay */
-  top: 0; /* Pusatkan di atas */
-  left: 0; /* Pusatkan di kiri */
-  right: 0; /* Pusatkan di kanan */
-  bottom: 0; /* Pusatkan di bawah */
-  background-color: rgba(255, 255, 255, 0.5); /* Warna overlay dengan transparansi */
-  z-index: 1; /* Pastikan overlay di atas gambar */
-}
 
-.bg-image-4 h3 {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #704b00; /* Ubah warna judul menjadi putih */
-  font-size: large; /* Ukuran font untuk judul */
-  font-weight: bold; /* Tebal untuk judul */
-}
-
-.bg-image-4 p {
-  position: relative; /* Posisikan teks agar di atas overlay */
-  z-index: 2; /* Pastikan teks di atas overlay */
-  color: #000000; /* Ubah warna deskripsi menjadi putih */
-  font-size: small; /* Ukuran font untuk deskripsi */
-}
 
 /* Other general styles for flip card */
 .card-body ul {
@@ -2075,78 +1923,8 @@ section,
   font-size: 1rem; /* Set font size for list items */
 }
 
-/* Flip card container */
-.flip-card {
-  width: 100%; /* Sesuaikan lebar card dengan lebar kontainer */
-  height: 100%; /* Sesuaikan tinggi card dengan tinggi kontainer */
-  perspective: 1000px;
-  border-radius: 10px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-/* Set a fixed height for the flip card */
-.flip-card {
-  height: 400px; /* Sesuaikan tinggi card sesuai kebutuhan */
-}
-
-/* Front side of the card */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px; /* Memberikan ruang di dalam card */
-  box-sizing: border-box;
-}
-
-/* Front side of the card */
-.flip-card-front {
-  background-color: white; /* Atur latar belakang sesuai kebutuhan */
-}
-
-/* Back side of the card */
-.flip-card-back {
-  background-color: white; /* Atur latar belakang sesuai kebutuhan */
-  transform: rotateY(180deg);
-  font-family: sans-serif;
-  font-weight: 400;
-}
-
-/* Flip the card on click */
-.flip-card.flip .flip-card-inner {
-  transform: rotateY(180deg);
-}
 .mt{
   margin-top: 2.5rem;
-}
-
-.flip-icon {
-  font-size: 16px; /* Atur ukuran ikon */
-  position: absolute;
-  top: 240px; /* Atur posisi ikon */
-  right: -7px;
-  color: #cacaca; /* Warna ikon */
-  cursor: pointer; /* Ubah cursor menjadi pointer untuk menunjukkan interaktivitas */
-  transition: transform 0.3s ease; /* Tambahkan animasi */
-}
-
-.flip-icon:hover {
-  transform: rotate(180deg); /* Efek rotasi saat di-hover */
-}
-
-.flipped {
-  transform: rotate(180deg);
 }
 
 .img-fluid {
@@ -2183,7 +1961,6 @@ section,
     }
   }
 }
-
 .card {
   margin: 0 1rem;
   overflow: hidden;
@@ -2617,13 +2394,27 @@ html {
   font-family: 'Montserrat';
 }
 
-.slider {
+.container-card {
+  display: flex;
+  gap: auto;
+  flex-wrap: wrap;
+  justify-content: center; /* Atur jarak antar card */
+  padding-bottom: 10px;
+  /* padding: 10 10px; */
+  /* padding: 0 20px; Tambahkan padding kiri dan kanan */
+}
+
+.card {
   position: relative;
-  width: 600px;
-  height: 400px;
-  overflow: hidden;
+  width: 280px;
+  height: 380px;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin-top: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
 }
 
 .slides {
@@ -2634,5 +2425,176 @@ html {
 .slide {
   min-width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.front .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.front h3 {
+  /* font-size: 18px; */
+  color: #000000;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.front .icon {
+  margin-top: 110px;
+  width: auto;
+  height: 60px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  /* color: #000000; */
+}
+
+.back p {
+  font-size: 16px;
+  padding: 20px;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Atur teks pada bagian belakang */
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  padding-top: 70px;
+  color: rgb(0, 0, 0);
+}
+
+/* Media query untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Ubah tata letak menjadi vertikal */
+      align-items: center;
+  }
+
+  .card {
+      margin-bottom: 20px; /* Tambahkan jarak antar card di layout vertikal */
+  }
+}
+
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.service-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(25% - 20px);
+  height: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-content {
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+p {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 60px;
+}
+
+.btn-read-more {
+  background-color: var(--nav-dropdown-hover-color);
+  font-size: small;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-read-more:hover {
+  background-color: #000;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .service-card {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+      width: 100%;
+  }
+}
+
+.package-h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna judul menjadi putih */
+  font-size: 25px; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+  font-family: sans-serif;
+  text-align: center;
+
+}
+
+.package-p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: var(--default-color); /* Ubah warna judul menjadi putih */
+  font-size: 18px; /* Ukuran font untuk judul */
+  font-weight: 300;
+  font-family: sans-serif;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.package-ul {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna judul menjadi putih */
+  font-size: 15px; /* Ukuran font untuk judul */
+  font-weight: 200;
+  font-family: sans-serif;
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
 }

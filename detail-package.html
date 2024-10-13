@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowriest Decoration - Package Details</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/logo-only.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center position-relative">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <img src="assets/img/logo-dark.png" alt="Flowriest Decoration Logo">
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="package.html" class="active">Package</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="https://wa.me/6282338591552">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Package Detail Section -->
+        <section id="package-detail" class="package-detail section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Package Details</h2>
+                    <p>Discover the perfect package for your wedding</p>
+                </div>
+
+                <div class="package-content">
+                    <h3 class="package-h3" id="package-title" class="text-center">Package Name</h3>
+                    <div class="package-image" id="package-image"></div>
+                    <div class="package-description mt-4">
+                        <p class="package-p" id="package-description">Description of the package goes here.</p>
+                        <ul class="package-ul" id="package-list">
+                            <!-- JavaScript will populate this list -->
+                        </ul>
+                    </div>
+                    <a href="package.html" class="btn-read-more">Back to Packages</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br/>
+    <br/>
+    <br/>
+    <!-- Footer -->
+    <footer id="footer" class="footer dark-background">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 footer-about text-center">
+                        <a href="index.html" class="logo d-flex justify-content-center align-items-center">
+                            <span class="sitename">FLOWRIEST DECORATION</span>
+                        </a>
+                        <div class="social-links d-flex justify-content-center mt-4">
+                            <a href=""><i class="bi bi-tiktok"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/flowriestdecoration/"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript untuk menampilkan detail package
+        const urlParams = new URLSearchParams(window.location.search);
+        const packageType = urlParams.get('package');
+
+        const packageDetails = {
+            "basic-elegance": {
+                title: "Basic Elegance",
+                image: "assets/img/package/basic-elegance.jpg",
+                description: "A perfect blend of simplicity and sophistication, ideal for intimate weddings.",
+                items: [
+                "Backdrop pelaminan 12 meter",
+                "1 set kursi pengantin (4 tipe pilihan)",
+                "1 set rangkaian bunga artificial",
+                "Mini garden bunga artificial",
+                "1 meja akad hias bunga",
+                "7 kursi akad hias bunga: tiffany",
+                "2 pcs kotak sumbangan",
+                "1 welcome gate",
+                "1 welcome sign kaca",
+                "Karpet jalan 50 meter",
+                "Standing flowers 6 pcs area jalan"
+
+                ]
+            },
+            "classic-romance": {
+                title: "Classic Romance",
+                image: "assets/img/package/classic-romance.jpg",
+                description: "Timeless elegance for a romantic wedding setting.",
+                items: [
+                "Backdrop pelaminan 8 meter",
+                "1 set kursi pengantin (3 tipe pilihan)",
+                "1 set rangkaian bunga artificial mix fresh flowers",
+                "Mini garden bunga artificial mix fresh flowers",
+                "1 meja akad hias bunga",
+                "7 kursi akad hias bunga (2 tipe pilihan)",
+                "2 pcs kotak sumbangan",
+                "1 welcome gate",
+                "1 welcome sign kaca",
+                "Karpet jalan 35 meter",
+                "Standing flowers 6 pcs area jalan",
+                "Spot light 5 pcs",
+                "Lampu area jalan 4 pcs",
+                "Pergola 3x3 meter full daun (include lighting)"
+                ]
+            },
+            "royal-glamour": {
+                title: "Royal Glamour",
+                image: "assets/img/package/classic-romance.jpg",
+                description: "Extravagant and luxurious, designed for those who want a grand celebration.",
+                items: [
+                "Backdrop pelaminan 12 meter",
+                "1 set kursi pengantin (4 tipe pilihan)",
+                "1 set rangkaian bunga artificial mix fresh flowers",
+                "Mini garden bunga artificial mix fresh flowers",
+                "1 meja akad hias bunga",
+                "7 kursi akad hias bunga (4 tipe pilihan)",
+                "2 pcs kotak sumbangan",
+                "1 welcome gate",
+                "1 welcome sign kaca",
+                "Karpet jalan 50 meter",
+                "Standing flowers 6 pcs area jalan",
+                "Spot light 8 pcs",
+                "Lampu area jalan 6 pcs",
+                "Pergola 3x4 meter full daun (include lighting)",
+                "Dekorasi tambahan seperti lampu gantung",
+                "1 Set photoboth/background entertainment/background buku tamu"
+                ]
+            },
+            "custom": {
+                title: "Custom",
+                image: "assets/img/package/classic-romance.jpg",
+                description: "Tailored decorations to meet your unique vision and preferences.",
+                items: [
+                "Konsultasi dengan tim Flowriest Decoration untuk menciptakan konsep yang sepenuhnya disesuaikan dengan keinginan pengantin",
+                "Pilihan backdrop, bunga, warna, dan tema yang sesuai dengan visi pengantin",
+                "Fleksibilitas dalam memilih item dan area yang akan didekorasi"
+                ]
+            },
+        };
+
+        if (packageDetails[packageType]) {
+            const packageInfo = packageDetails[packageType];
+            document.getElementById('package-title').textContent = packageInfo.title;
+            document.getElementById('package-image').style.backgroundImage = `url(${packageInfo.image})`;
+            document.getElementById('package-description').textContent = packageInfo.description;
+
+            const packageList = document.getElementById('package-list');
+            packageInfo.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                packageList.appendChild(li);
+            });
+        } else {
+            document.querySelector('.package-content').textContent = "Package not found.";
+        }
+    </script>
+</body>
+
+</html>
