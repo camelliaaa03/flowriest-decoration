@@ -62,9 +62,10 @@
 
                 <div class="package-content">
                     <h3 class="package-h3" id="package-title" class="text-center">Package Name</h3>
-                    <div class="package-image" id="package-image"></div>
+                    <!-- <div class="package-image" id="package-image"></div> -->
                     <div class="package-description mt-4">
                         <p class="package-p" id="package-description">Description of the package goes here.</p>
+                        
                         <ul class="package-ul" id="package-list">
                             <!-- JavaScript will populate this list -->
                         </ul>
@@ -120,8 +121,8 @@
         const packageDetails = {
             "basic-elegance": {
                 title: "Basic Elegance",
-                image: "assets/img/package/basic-elegance.jpg",
-                description: "A perfect blend of simplicity and sophistication, ideal for intimate weddings.",
+                image: "assets/img/portfolio/aaa/paket%201.jpeg",
+                description: "Menawarkan dekorasi dengan keanggunan sederhana dan desain minimalis namun tetap memukau.",
                 items: [
                 "Backdrop pelaminan 12 meter",
                 "1 set kursi pengantin (4 tipe pilihan)",
@@ -140,7 +141,7 @@
             "classic-romance": {
                 title: "Classic Romance",
                 image: "assets/img/package/classic-romance.jpg",
-                description: "Timeless elegance for a romantic wedding setting.",
+                description: "Menghadirkan suasana elegan dan romantis dengan sentuhan klasik",
                 items: [
                 "Backdrop pelaminan 8 meter",
                 "1 set kursi pengantin (3 tipe pilihan)",
@@ -161,7 +162,7 @@
             "royal-glamour": {
                 title: "Royal Glamour",
                 image: "assets/img/package/classic-romance.jpg",
-                description: "Extravagant and luxurious, designed for those who want a grand celebration.",
+                description: "Dekorasi dengan nuansa mewah dan elegan, menggabungkan elemen klasik dengan sentuhan modern yang menciptakan suasana yang megah",
                 items: [
                 "Backdrop pelaminan 12 meter",
                 "1 set kursi pengantin (4 tipe pilihan)",
@@ -184,7 +185,7 @@
             "custom": {
                 title: "Custom",
                 image: "assets/img/package/classic-romance.jpg",
-                description: "Tailored decorations to meet your unique vision and preferences.",
+                description: "Menawarkan dekorasi pernikahan yang sepenuhnya disesuaikan dengan kebutuhan dan preferensi pasangan",
                 items: [
                 "Konsultasi dengan tim Flowriest Decoration untuk menciptakan konsep yang sepenuhnya disesuaikan dengan keinginan pengantin",
                 "Pilihan backdrop, bunga, warna, dan tema yang sesuai dengan visi pengantin",
@@ -196,7 +197,7 @@
         if (packageDetails[packageType]) {
             const packageInfo = packageDetails[packageType];
             document.getElementById('package-title').textContent = packageInfo.title;
-            document.getElementById('package-image').style.backgroundImage = `url(${packageInfo.image})`;
+            // document.getElementById('package-image').style.backgroundImage = `url(${packageInfo.image})`;
             document.getElementById('package-description').textContent = packageInfo.description;
 
             const packageList = document.getElementById('package-list');

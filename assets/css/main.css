@@ -1412,6 +1412,28 @@ section,
   font-size: 14px;
 }
 
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Menambahkan jarak antar ikon dan teks */
+}
+
+.info-item i {
+  font-size: 24px; /* Ukuran ikon */
+  color: #f7a600; /* Warna ikon */
+}
+
+.info-item h3 {
+  margin: 0; /* Menghapus margin default */
+  font-size: 18px; /* Ukuran teks judul */
+}
+
+.info-item p {
+  margin: 0; /* Menghapus margin default */
+  font-size: 16px; /* Ukuran teks paragraf */
+}
+
+
 .contact .php-email-form {
   height: 100%;
 }
@@ -1830,11 +1852,17 @@ section,
 }
 
 .icon {
-  width: 50px; /* Atur lebar container sesuai kebutuhan */
-  height: 50px; /* Atur tinggi container sesuai kebutuhan */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--accent-color);
+  color: var(--contrast-color);  
+  width: 64px;
+  height: 64px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  padding: 5px;
+  transition: 0.3s;
 }
 
 .icon img {
@@ -1882,35 +1910,97 @@ section,
 
 /* Background Image for Each Card Front */
 .bg-image-1 {
-  background-image: url('../img/portfolio/aaa/paket\ 1.jpeg'); /* Gambar untuk Basic Elegance */
+  background-image: url('../img/portfolio/aaa/bg-image1.png'); /* Gambar untuk Basic Elegance */
   background-size: cover; /* Menutupi seluruh area */
-
 }
 
 /* Background Image for Classic Romance */
 .bg-image-2 {
-  background-image: url('../img/portfolio/aaa/paket\ 3\ \(2\).jpeg'); /* Gambar untuk Classic Romance */
+  background-image: url('../img/portfolio/aaa/bg-image2.png'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
 
 }
-
-
 
 /* Background Image for Royal Glamour */
 .bg-image-3 {
-  background-image: url('../img/portfolio/aaa/paket\ 3.jpeg'); /* Gambar untuk Classic Romance */
+  background-image: url('../img/portfolio/aaa/bg-image3.png'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
- 
 }
-
 
 /* Background Image for Custom package */
 .bg-image-4 {
-  background-image: url('../img/portfolio/aaa/about.jpeg'); /* Gambar untuk Classic Romance */
+  background-image: url('../img/portfolio/aaa/bg-image4.png'); /* Gambar untuk Classic Romance */
   background-size: cover; /* Menutupi seluruh area */
 }
 
+.bg-image-1 h3 {
+  position: relative;
+  z-index: 2;
+  color: #704b00;
+  font-size: large;
+  font-weight: bold;
+}
 
+.bg-image-1 p {
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  
+}
+
+.bg-image-2 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-2 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  
+}
+
+.bg-image-3 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-3 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  
+}
+
+.bg-image-4 h3 {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #704b00; /* Ubah warna judul menjadi putih */
+  font-size: large; /* Ukuran font untuk judul */
+  font-weight: bold; /* Tebal untuk judul */
+}
+
+.bg-image-4 p {
+  position: relative; /* Posisikan teks agar di atas overlay */
+  z-index: 2; /* Pastikan teks di atas overlay */
+  color: #000000; /* Ubah warna deskripsi menjadi putih */
+  
+}
+.image-transparation::before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
 
 /* Other general styles for flip card */
 .card-body ul {
@@ -2395,6 +2485,7 @@ html {
 }
 
 .container-card {
+  position: relative;
   display: flex;
   gap: auto;
   flex-wrap: wrap;
@@ -2488,6 +2579,26 @@ html {
   .card {
       margin-bottom: 20px; /* Tambahkan jarak antar card di layout vertikal */
   }
+}
+
+.swipe-icons {
+  position: absolute;
+  bottom: 10px; /* Posisi ikon di bagian bawah kartu */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 180px; /* Jarak antara ikon kiri dan kanan */
+}
+
+.swipe-icons i {
+  font-size: 20px; /* Ukuran ikon */
+  color:rgba(0, 0, 0, 0.1); /* Warna ikon */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.swipe-icons i:hover {
+  transform: scale(1.2); /* Perbesar ikon saat di-hover */
 }
 
 .services-section {
@@ -2597,4 +2708,15 @@ p {
   font-family: sans-serif;
   /* padding-top: 20px; */
   padding-bottom: 20px;
+}
+
+.package-image {
+  display: flex; /* Mengaktifkan flexbox */
+  align-items: center; /* Memusatkan secara vertikal */
+  justify-content: center; /* Memusatkan secara horizontal */
+  width: 100%;
+  height: 300px; /* Sesuaikan tinggi sesuai kebutuhan */
+  background-size: cover; /* Mengubah ke 'cover' agar gambar terisi area dengan baik */
+  background-position: center; /* Memusatkan gambar dalam area */
+  border-radius: 10px; /* Opsional, untuk tampilan rounded */
 }
